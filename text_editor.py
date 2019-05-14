@@ -25,6 +25,7 @@ def createMain():
    fontmenu.add_command(label="Helvetica", command=FontHelvetica)
    fontmenu.add_command(label="Courier", command=FontCourier)
    fontmenu.add_command(label="TimesNewRoman", command=FontTimes)
+   fontmenu.add_command(label="Symbol", command=FontSymbol)
 
    menubar.add_cascade(label="Font", menu=fontmenu)
    helpmenu = Menu(menubar, tearoff=0)
@@ -72,6 +73,11 @@ def FontTimes():
    global text
    text.config(font="Times")
 
+def FontSymbol():
+   global text
+   text.config(font="Symbol")
+
+print(dir(text.config()))
 createMain()
 
 
